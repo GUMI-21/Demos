@@ -3,8 +3,10 @@ package tool
 import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
+	"image/color"
 	"time"
 )
 
@@ -63,3 +65,16 @@ func Clock() {
 }
 
 //画布和画布对象
+func Canvas() {
+	myApp := app.New()
+	myWindow := myApp.NewWindow("Canvas")
+	myCanvas := myWindow.Canvas() //画布
+
+	blue := color.NRGBA{R: 0, G: 0, B: 180, A: 255}
+	rect := canvas.NewRectangle(blue)
+	myCanvas.SetContent(rect)
+}
+func setContentToText(c fyne.Canvas) {
+	//green := color.NRGBA{R: 0xff, G: 0x33, A: 0xff}
+
+}
