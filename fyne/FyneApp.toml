@@ -1,0 +1,6 @@
+[Details]
+  Icon = "test.png"
+  Name = "HeeloWorld"
+  ID = "com.example.app"
+  Version = "1.0.0"
+  Build = 3
