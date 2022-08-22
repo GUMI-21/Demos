@@ -74,7 +74,3 @@ func Canvas() {
 	rect := canvas.NewRectangle(blue)
 	myCanvas.SetContent(rect)
 }
-func setContentToText(c fyne.Canvas) {
-	//green := color.NRGBA{R: 0xff, G: 0x33, A: 0xff}
-
-}
