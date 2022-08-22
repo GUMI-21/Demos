@@ -1,40 +1,32 @@
 package main
 
 import (
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	"fmt"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
+	"time"
 )
 
 //安装 `go get -u github.com/jinzhu/gorm`
+//mysql连接
 
 //quick-start
-type Product struct {
-	gorm.Model
-	Code  string
-	Price uint
-}
 
 func main() {
-	db, err := gorm.Open("sqlite3", "test.db")
+	dsn := "root:luoying123..@tcp(127.0.0.1:3306)/test?charset=utf8mb4&parseTime=True&loc=Local"
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		panic("failed to connect database")
+		fmt.Println(err)
+		return
 	}
-	defer db.Close()
+	sqlDb, err := db.DB()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	sqlDb.SetMaxIdleConns(10)
+	sqlDb.SetMaxOpenConns(100)
+	sqlDb.SetConnMaxLifetime(time.Hour)
+	defer sqlDb.Close()
 
-	//自动检查 Product 结构是否变化，变化则进行迁移
-	db.AutoMigrate(&Product{})
-
-	// 增
-	db.Create(&Product{Code: "L1212", Price: 1000})
-
-	// 查
-	var product Product
-	db.First(&product, 1)                   // 找到id为1的产品
-	db.First(&product, "code = ?", "L1212") // 找出 code 为 l1212 的产品
-
-	// 改 - 更新产品的价格为 2000
-	db.Model(&product).Update("Price", 2000)
-
-	// 删 - 删除产品
-	db.Delete(&product)
 }
