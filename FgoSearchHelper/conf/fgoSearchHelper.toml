@@ -1,0 +1,8 @@
+[Log]
+#debug          = true
+filename       = "api_server"
+filesize       = 128
+filenum        = 10
+level          = "INFO"
+dir            = "./logs"
+use_gzip = true
