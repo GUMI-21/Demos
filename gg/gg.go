@@ -23,6 +23,7 @@ func drawCircle() {
 	dc.SavePNG("out.png")
 }
 
+//filePath 封面图
 func imageMaker(filePath string) error {
 	//load cover
 	file, err := os.Open(filePath)
