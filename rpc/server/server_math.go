@@ -6,29 +6,29 @@ import (
 	"net/rpc"
 )
 
-type ParamsMath struct {
-	a, b int
+type Params struct {
+	A, B int
 }
 
-type RectMath struct{}
+type Rect struct{}
 
-func (r *RectMath) multi(p ParamsMath, ret *int) error {
-	*ret = p.a * p.b
+func (r *Rect) Multi(p Params, ret *int) error {
+	*ret = p.A * p.B
 	return nil
 }
 
-func (r *RectMath) Division(p ParamsMath, ret *int) error {
-	*ret = p.a / p.b
+func (r *Rect) Division(p Params, ret *int) error {
+	*ret = p.A / p.B
 	return nil
 }
 
-func (r *RectMath) Remainder(p ParamsMath, ret *int) error {
-	*ret = p.a / p.b
+func (r *Rect) Remainder(p Params, ret *int) error {
+	*ret = p.A % p.B
 	return nil
 }
 
 func main() {
-	rect := new(RectMath)
+	rect := new(Rect)
 	rpc.Register(rect)
 	rpc.HandleHTTP()
 	err := http.ListenAndServe(":8080", nil)
