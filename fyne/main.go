@@ -1,6 +1,6 @@
 package main
 
-import "example.com/m/fyne/tool"
+import "Demos/fyne/tool"
 
 func main() {
 	//tool.Clock()

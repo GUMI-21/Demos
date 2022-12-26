@@ -7,7 +7,11 @@ require (
 	github.com/Shopify/sarama v1.36.0
 	github.com/fogleman/gg v1.3.0
 	github.com/go-sql-driver/mysql v1.6.0
+	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
+	github.com/pkg/profile v1.7.0
 	github.com/siddontang/go v0.0.0-20180604090527-bdc77568d726
+	google.golang.org/grpc v1.38.0
+	google.golang.org/protobuf v1.26.0
 	gorm.io/driver/mysql v1.3.6
 	gorm.io/gorm v1.23.8
 )
@@ -46,7 +50,6 @@ require (
 	github.com/jsummers/gobmp v0.0.0-20151104160322-e2ba15ffa76e // indirect
 	github.com/klauspost/compress v1.15.9 // indirect
 	github.com/pierrec/lz4/v4 v4.1.15 // indirect
-	github.com/pkg/profile v1.7.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
 	github.com/srwiley/oksvg v0.0.0-20200311192757-870daf9aa564 // indirect
@@ -60,6 +63,7 @@ require (
 	golang.org/x/net v0.0.0-20220809184613-07c6da5e1ced // indirect
 	golang.org/x/sys v0.0.0-20220728004956-3c1f35247d10 // indirect
 	golang.org/x/text v0.4.0 // indirect
+	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	honnef.co/go/js/dom v0.0.0-20210725211120-f030747120f2 // indirect
 )
