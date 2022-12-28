@@ -11,7 +11,7 @@ require (
 	github.com/pkg/profile v1.7.0
 	github.com/siddontang/go v0.0.0-20180604090527-bdc77568d726
 	google.golang.org/grpc v1.38.0
-	google.golang.org/protobuf v1.26.0
+	google.golang.org/protobuf v1.28.1
 	gorm.io/driver/mysql v1.3.6
 	gorm.io/gorm v1.23.8
 )
