@@ -21,7 +21,7 @@ var DbLocalMysql = Config{
 	Addr:            "127.0.0.1:3306",
 	User:            "root",
 	Pwd:             "luoying123..",
-	Db:              "test",
+	Db:              "datastruct",
 	MaxOpenConns:    5,
 	MaxIdleConns:    3,
 	MaxConnLifeTime: time.Hour.Hours(),

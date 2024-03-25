@@ -24,7 +24,7 @@ func main() {
 	defer client.Close()
 	//发送消息
 	for i := 0; i <= 1000; i++ {
-		msg.Value = sarama.StringEncoder(fmt.Sprintf("test%d", i))
+		msg.Value = sarama.StringEncoder(fmt.Sprintf("datastruct%d", i))
 		pid, offset, err := client.SendMessage(msg)
 		if err != nil {
 			fmt.Println("send msg failed,err:", err)

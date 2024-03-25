@@ -60,7 +60,7 @@ func imageMaker(filePath string) error {
 	_ = jpeg.Encode(out, m, nil)
 
 	//load background
-	imgBkg, err := gg.LoadImage("test.png")
+	imgBkg, err := gg.LoadImage("datastruct.png")
 	if err != nil {
 		log.Fatal(err)
 		return err
@@ -72,7 +72,7 @@ func imageMaker(filePath string) error {
 	dc.DrawImage(imgCover, 13, 13)
 
 	//保存的制作图片
-	err = dc.SavePNG("test.png")
+	err = dc.SavePNG("datastruct.png")
 	if err != nil {
 		log.Error()
 		return err
