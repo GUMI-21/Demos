@@ -62,6 +62,7 @@ func (lru *LRUCache) addToHead(node *DLinkedNode) {
 	node.prev = lru.head
 	node.next = lru.head.next
 	lru.head.next.prev = node
+
 	lru.head.next = node
 }
 
