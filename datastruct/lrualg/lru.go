@@ -1,5 +1,6 @@
 package lrualg
 
+// LRUCache lru算法,淘汰用到最少次数的缓存
 type LRUCache struct {
 	size       int64
 	capacity   int64
